@@ -5,7 +5,7 @@ import joblib
 tfidf = joblib.load("tfidf.pkl")
 model = joblib.load("best_model.pkl")
 
-st.title("Twitter Sentiment Prediction")
+st.title("Binary Sentiment Classification Using TF-IDF and Logistic Regression")
 
 user_text = st.text_area("Enter your sentence:")
 
