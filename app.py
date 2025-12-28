@@ -1,11 +1,12 @@
-
+from pathlib import Path
 import streamlit as st
 import joblib
 import numpy as np
 
-# Load TF-IDF and trained model
-tfidf = joblib.load("tfidf.pkl")
-model = joblib.load("best_model.pkl")
+BASE_DIR = Path(__file__).resolve().parent
+
+tfidf = joblib.load(BASE_DIR / "tfidf.pkl")
+model = joblib.load(BASE_DIR / "best_model.pkl")
 
 st.title("Twitter Sentiment Classification (TF-IDF + Logistic Regression)")
 st.caption("Multiclass: Negative / Neutral / Positive")
